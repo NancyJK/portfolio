@@ -30,6 +30,7 @@
 .about-img,
 .about-content {
   flex: 1 0 100%;
+   // shorthand for three properties flex-grow, flex-shrink, flex-basis.
   margin: 10px;
 }
 
@@ -60,8 +61,8 @@
 
 .s-icons:hover {
   color: $text-color;
-  transform: scale(1.3) translateY(-5px);
-  box-shadow: 0 0 25px $main-color;
+  transform: scale(1.3) translateY(-5px);  //  1.3 means the element will be scaled by 130%, making it larger than its original size.
+  box-shadow: 0 0 25px $main-color;        // translateY() function moves an element vertically. element will be moved up by 5 pixels.
   background-color: $main-color;
 }
 
@@ -100,3 +101,6 @@
     flex: 1;
   }
 }
+
+
+// The flex: 1 0 100%; and flex: 1 0 50%; the elements are allowed to grow to fill the container, are not allowed to shrink, and have a base size of 100% or 50% of the container’s width.

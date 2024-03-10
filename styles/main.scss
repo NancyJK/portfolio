@@ -9,7 +9,6 @@
 @import "_about";
 
 body {
-  // min-height: 100vh;
   min-width: 100%;
   color: $text-color;
 }
@@ -17,7 +16,7 @@ body {
 section {
   min-height: 100vh;
   min-width: 100%;
-  padding: 10rem 12% 10rem;
+  padding: 10rem 10rem;
 
   h2 {
     margin-top: 3rem;
@@ -29,9 +28,9 @@ section {
 
 // footer
 .footer {
-  background-color: black;
+  background-color: #000000;
   min-width: 100vw;
-  padding: 4rem 12% 4rem;
+  padding: 4rem 12%;
   display: flex;
 }
 
@@ -57,7 +56,8 @@ section {
 }
 
 .footer .social a:hover {
-  transform: scale(1.2) translateY(-10px);
+  transform: scale(1.2) translateY(-10px);  // 1.2 enlarges the element by 20%.
+  // translateY moves the element vertically on the Y-axis. it’s moving the element 10 pixels up from its current position.
   background-color: $blue-color;
   color: $text-color-b;
   box-shadow: 0 0 25px $main-color;

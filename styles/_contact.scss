@@ -55,11 +55,11 @@
 
 @keyframes slideInFromLeft {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-100%);   // translateX(-100%), which moves the element 100% of its width to the left of its original position
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0);     // translateX(0), which moves the element back to its original position.
     opacity: 1;
   }
 }

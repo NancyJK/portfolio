@@ -48,20 +48,32 @@
 //   0%,
 //   100% {
 //     transform: translateY(0);
+// translateY(0), the element stays at its original position along the Y-axis.
+// translateY(0), returns the element to its original position.
 //   }
 //   50% {
 //     transform: translateY(-50px);
+// translateY(-50px),moves the element 50 pixels up from its original position.
 //   }
 // }
 
-
 @keyframes slideInFade {
-  0% { transform: translateX(100%); opacity: 0; }
-  50% { transform: translateX(0); opacity: 1; }
-  100% { transform: translateX(-100%); opacity: 0; }
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    // translateX(100%), the element starts 100% of its width to the right of its original position.
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+    // translateX(0), moves the element back to its original position.
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+    // translateX(-100%), moves the element 100% of its width to left of its original position. sets the opacity back to 0, making the element completely transparent again.
+  }
 }
-
-
 
 .home-img img {
   position: relative;
@@ -73,17 +85,15 @@
   cursor: pointer;
   transition: 0.4s ease-in-out;
   // animation: bounce 2s ease-in-out infinite;
- animation: slideInFade 6s ease-in-out infinite;
-  
+  animation: slideInFade 6s ease-in-out infinite;
 }
-
 
 .home-img img:hover {
   animation-play-state: paused;
   cursor: pointer;
   box-shadow: 0 0 25px $main-color, 0 0 50px $main-color, 0 0 100px $main-color;
+  // layered shadow effect
 }
-
 
 // @keyframes colorPulse {
 //   0% { filter: hue-rotate(0deg); }
