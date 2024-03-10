@@ -1,0 +1,160 @@
+.contact {
+  width: 100%;
+  background-color: $bg-color;
+}
+
+.contact h2 {
+  color: $main-color;
+}
+
+.contact .heading span {
+  color: $text-color;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 15rem;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 2rem;
+  border: none;
+  border-bottom: 2px solid $main-color;
+  background: $blue-color;
+  color: $text-color;
+  font-size: 1.5rem;
+  resize: none;
+}
+
+.contact form .input-box input:focus,
+.contact form .input-box textarea:focus {
+  outline: none;
+  border-bottom: 2px solid $text-color;
+}
+
+.contact form .input-box input::placeholder,
+.contact form .input-box textarea::placeholder {
+  color: $text-color;
+  opacity: 0.5;
+}
+
+.contact form .input-box input:focus::placeholder,
+.contact form .input-box textarea:focus::placeholder {
+  opacity: 0.8;
+}
+
+.contact form .btn:hover {
+  background-color: $blue-color;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.contact h2 {
+  animation: slideInFromLeft 2s ease-out;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.contact form .btn {
+  animation: slideInFromRight 2s ease-out;
+}
+
+@media (max-width: 1024px) {
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .contact h2 {
+    margin-top: 10rem;
+  }
+
+  .contact form {
+    gap: 2rem;
+  }
+
+  .contact form .input-box input,
+  .contact form textarea {
+    font-size: 1.2rem;
+  }
+
+  .contact form .btn {
+    padding: 0.8rem 1.6rem;
+    margin-top: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .contact form .input-box input,
+  .contact form textarea {
+    font-size: 1.2rem;
+  }
+
+  .contact form .btn {
+    padding: 0.8rem 1.6rem;
+    margin-top: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .contact h2 {
+    margin-top: 5rem;
+  }
+
+  .contact form {
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .contact form .input-box input,
+  .contact form textarea {
+    font-size: 1rem;
+  }
+
+  .contact form .btn {
+    padding: 0.6rem 1.2rem;
+    margin-top: 1.2rem;
+  }
+}

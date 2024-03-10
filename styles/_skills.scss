@@ -1,0 +1,91 @@
+.skills-box {
+  background-color: $bg-color;
+
+  .skills {
+    width: 100%;
+    margin: 1.5rem 0.5rem;
+  }
+
+  p {
+    font-size: 2rem;
+    margin-left: 200px;
+  }
+
+  span {
+    color: $blue-color;
+  }
+}
+
+.skills-box .skills div {
+  height: 20px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  margin-left: 200px;
+}
+
+.html {
+  width: 70%;
+  background-color: #4caf4f78;
+}
+.css {
+  width: 60%;
+  background-color: #2195f397;
+}
+.js {
+  width: 20%;
+  background-color: #f443368d;
+}
+.terminal {
+  width: 70%;
+  background-color: #8080808b;
+}
+.bootstrap {
+  width: 60%;
+  background-color: #563d7c97;
+}
+.github {
+  width: 60%;
+  background-color: #d774563e;
+}
+.sass {
+  width: 60%;
+  background-color: #cd679889;
+}
+
+@media (max-width: 1024px) {
+  .skills-box p {
+    font-size: 1.5rem;
+    margin-left: 100px;
+    margin-top: 7rem;
+  }
+
+  .skills-box .skills div {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-box p {
+    font-size: 1.5rem;
+    margin-left: 30px;
+  }
+
+  .skills-box .skills div {
+    margin-left: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .skills-box p {
+    font-size: 1rem;
+    margin-left: 50px;
+  }
+
+  .skills-box .skills div {
+    margin-left: 50px;
+  }
+}

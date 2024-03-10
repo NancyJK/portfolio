@@ -1,0 +1,102 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue-color;
+  gap: 7rem;
+
+  h2 span {
+    color: $main-color;
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  a {
+    font-size: 1.5rem;
+    color: $text-color;
+    margin-right: 1rem;
+  }
+
+  span {
+    margin: 2px;
+    color: $main-color;
+    font-weight: bolder;
+  }
+}
+
+.about-img,
+.about-content {
+  flex: 1 0 100%;
+  margin: 10px;
+}
+
+.about-img img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.about-img img:hover {
+  box-shadow: 0 0 25px $main-color;
+}
+
+.s-icons {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: $main-color;
+  font-size: 2.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 2px solid $text-color;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease-in-out;
+}
+
+.s-icons:hover {
+  color: $text-color;
+  transform: scale(1.3) translateY(-5px);
+  box-shadow: 0 0 25px $main-color;
+  background-color: $main-color;
+}
+
+@media only screen and (max-width: 400px) {
+  .about-img,
+  .about-content {
+    flex: 1 0 100%;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .about-img,
+  .about-content {
+    flex: 1 0 100%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .about-img,
+  .about-content {
+    flex: 1 0 50%;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  .about-img,
+  .about-content {
+    flex: 1 0 50%;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .about-img,
+  .about-content {
+    flex: 1;
+  }
+}

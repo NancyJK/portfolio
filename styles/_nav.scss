@@ -1,0 +1,103 @@
+// .navbar {
+// position: fixed;
+// top: 0;
+// width: 100%;
+// }
+.navbar a {
+  font-size: 2rem;
+  font-weight: 500;
+  color: $text-color;
+  margin-left: 4rem;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: $main-color;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+
+#menu-icon,
+#close-icon {
+  font-size: 3.6rem;
+  color: $main-color;
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+@media screen and (max-width: 400px) {
+  .navbar a {
+    font-size: 1.5rem;
+  }
+  #menu-icon,
+  #close-icon {
+    font-size: 2.8rem;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%); /* shift the element up by half its height */
+  }
+
+  #dropdown-menu li a {
+    right: 20%; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar a {
+    display: none;
+  }
+  #menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  #menu-icon,
+  #close-icon {
+    font-size: 2.8rem;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%); /* shift the element up by half its height */
+  }
+
+  #dropdown-menu li a {
+    right: 20%; 
+  }
+}
+
+#dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: $bg-color2;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#dropdown-menu li a {
+  display: block;
+  padding: 1rem;
+  color: $main-color;
+  text-decoration: none;
+}
+
+#dropdown-menu li a:hover {
+  color: $blue-color;
+}

@@ -1,0 +1,113 @@
+@import "_reset";
+@import "_variables";
+@import "_header";
+@import "_nav";
+@import "_home";
+@import "_contact";
+@import "_project";
+@import "_skills";
+@import "_about";
+
+body {
+  // min-height: 100vh;
+  min-width: 100%;
+  color: $text-color;
+}
+
+section {
+  min-height: 100vh;
+  min-width: 100%;
+  padding: 10rem 12% 10rem;
+
+  h2 {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    text-align: left;
+    font-size: 3rem;
+  }
+} 
+
+// footer
+.footer {
+  background-color: black;
+  min-width: 100vw;
+  padding: 4rem 12% 4rem;
+  display: flex;
+}
+
+.social,
+.list,
+.copyright {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .social a {
+  border: 2px solid $main-color;
+  width: 2.6rem;
+  line-height: 2.6rem;
+  height: 2.6rem;
+  color: $main-color;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.footer .social a:hover {
+  transform: scale(1.2) translateY(-10px);
+  background-color: $blue-color;
+  color: $text-color-b;
+  box-shadow: 0 0 25px $main-color;
+}
+
+.footer ul {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.footer ul li {
+  display: inline-block;
+  padding: 0 3rem;
+}
+
+.footer ul li a {
+  color: $text-color;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+  border-bottom: 3px solid $main-color;
+}
+
+.copyright {
+  color: $text-color;
+  font-size: 1.6rem;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.copyright:hover {
+  cursor: pointer;
+  color: $main-color;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+

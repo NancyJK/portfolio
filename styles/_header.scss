@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 12% 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  // background: rgba(0, 0, 0, 0.502);
+  // backdrop-filter: blur(10px);
+  z-index: 5;
+}
+
+.logo,
+#logo {
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo {
+  color: $main-color;
+}
+
+#logo {
+  color: $blue-color;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 2rem 5% 2rem; /* Reduce padding */
+  }
+
+  .logo,
+  #logo {
+    font-size: 2rem; /* Reduce font size */
+  }
+}
